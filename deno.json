@@ -1,0 +1,20 @@
+{
+    "name": "@pomdtr/val-town-heynote",
+    "version": "0.1.0",
+    "exports": {
+        ".": "./mod.ts"
+    },
+    "tasks": {
+        "embed": "deno run -A ./embedder.ts build",
+        "publish": "deno task embed && deno publish"
+    },
+    "publish": {
+        "include": [
+            "./mod.ts",
+            "./embed/**/*"
+        ]
+    },
+    "imports": {
+        "mime": "npm:mime@^4.0.3"
+    }
+}
