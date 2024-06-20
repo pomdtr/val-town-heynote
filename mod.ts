@@ -1,7 +1,7 @@
 import dir from "./embed/static/dir.ts";
 import mime from "mime";
 
-export default async function (req: Request): Promise<Response> {
+export async function handler(req: Request): Promise<Response> {
   let { pathname } = new URL(req.url);
   if (pathname.endsWith("/")) {
     pathname += "index.html";
@@ -23,3 +23,7 @@ export default async function (req: Request): Promise<Response> {
     },
   });
 }
+
+export default {
+  fetch: handler,
+};
