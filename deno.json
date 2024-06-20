@@ -6,7 +6,8 @@
     },
     "tasks": {
         "embed": "deno run -A ./embedder.ts build",
-        "publish": "deno task embed && deno publish"
+        "publish": "deno task embed && deno publish",
+        "start": "deno serve ./main.ts"
     },
     "publish": {
         "include": [
