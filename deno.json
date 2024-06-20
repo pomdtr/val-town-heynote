@@ -11,7 +11,8 @@
     },
     "publish": {
         "include": [
-            "./mod.ts"
+            "./mod.ts",
+            "./embed"
         ],
         "exclude": [
             "!embed"
