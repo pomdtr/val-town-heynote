@@ -1,5 +1,5 @@
 import dir from "./embed/static/dir.ts";
-import mime from "mime";
+import mime from "npm:mime@^4.0.3";
 
 export async function handler(req: Request): Promise<Response> {
   let { pathname } = new URL(req.url);
